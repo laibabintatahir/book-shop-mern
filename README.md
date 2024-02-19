@@ -7,13 +7,13 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
 
 ## Backend
 
-### CRUD Operations
+#### CRUD Operations
 
-### Router
+#### Router
 
-### CORS Policy
+#### CORS Policy
 
-### MongoDB Operations
+#### MongoDB Operations
 
 ## Frontend
 
