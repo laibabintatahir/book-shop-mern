@@ -15,22 +15,12 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
   - DeleteBook: Remove entries from the database.
 
 ### Router
-- Configure backend routes for handling various HTTP requests.
-  - Define routes for CRUD operations to interact with the database.
-  - Organize routes using Express Router for better code structure and maintainability.
 
 ### CORS Policy
 
 ### MongoDB Operations
 
 ## Frontend
-
-### CRUD Operations
-- Develop frontend components and functionalities for performing CRUD operations.
-  - Create: Implement forms for adding new data entries.
-  - Read: Display data retrieved from the backend in an organized manner.
-  - Update: Provide forms or interactive elements for editing existing data.
-  - Delete: Offer options for removing data entries.
 
   ## Frontend Screenshots
 
