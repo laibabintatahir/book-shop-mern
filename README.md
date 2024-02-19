@@ -38,7 +38,7 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
 ![Home Page](frontend/images/home.JPG)
 
 ### Create Book
-![Create Book](/images/createBook.JPG)
+![Create Book](book-shop-mern/images/createBook.JPG)
 
 ### Edit Book
 ![Edit Book](frontend/images/editBook.JPG)
