@@ -8,11 +8,6 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
 ## Backend
 
 ### CRUD Operations
-- Implement CRUD operations for managing data in the MongoDB database.
-  - CreateBook: Add new entries to the database.
-  - Read: Retrieve data from the database.
-  - UpdateBook: Modify existing entries in the database.
-  - DeleteBook: Remove entries from the database.
 
 ### Router
 
@@ -39,10 +34,6 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
 ### Show Book
 ![Show Book](frontend/showBook.JPG)
 
-### Router
-- Configure client-side routing using React Router DOM for navigation between different views or pages.
-  - Define routes for different components or pages within the React application.
-  - Implement navigation links and route parameters for dynamic content rendering.
 
 ## License
 
