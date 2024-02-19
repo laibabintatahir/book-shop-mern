@@ -8,6 +8,7 @@ const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
+
   const handleDeleteBook = () => {
     setLoading(true);
     axios
@@ -22,23 +23,23 @@ const DeleteBook = () => {
         console.log(error);
       });
   };
-  return (
-    <div className='p-4'>
-      <BackButton />
-      <h1 className='text-3xl my-4'>Delete Book</h1>
-      {loading ? <Spinner /> : ''}
-      <div className='flex flex-col items-center border-2 border-sky-400 rounded-xl w-[600px] p-8 mx-auto'>
-        <h3 className='text-2xl'>Are You Sure - You want to delete this book?</h3>
 
+  return (
+    <div className='container mx-auto p-4'>
+      <BackButton />
+      <h1 className='text-3xl my-7 text-center border-b-2 border-black'>Delete Book</h1>
+      {loading ? <Spinner /> : ''}
+      <div className='flex flex-col items-center border-2 border-black-400 rounded-xl w-[500px] p-8 mx-auto'>
+        <h3 className='text-2xl mb-8'>Are You Sure You Want to Delete This Book?</h3>
         <button
-          className='p-4 bg-red-600 text-white m-8 w-full'
+          className='p-4  bg-black text-white rounded-lg w-full'
           onClick={handleDeleteBook}
         >
-          Yes, Delete it
+          Yes, Delete It
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default DeleteBook;

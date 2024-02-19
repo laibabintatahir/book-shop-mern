@@ -24,10 +24,12 @@ const ShowBook = () => {
   }, []);
 
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center h-full my-4">
-      <div className="p-4 bg-white rounded-lg shadow-md border border-black">
-        <BackButton />
-        <h1 className="text-3xl my-4">Show Book</h1>
+    <div className="container mx-auto flex flex-col h-full my-4">
+      <BackButton />
+      <div className="p-4 bg-white flex flex-col items-center justify-center rounded-lg shadow-md border border-black max-w-md mx-auto">
+        <h1 className="text-3xl my-7 text-center border-b-2 border-black">
+          Show Book
+        </h1>
         {loading ? (
           <Spinner />
         ) : (
