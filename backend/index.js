@@ -14,12 +14,10 @@ app.post("/books", async (request, response) => {
       !request.body.title ||
       !request.body.publishedYear
     ) {
-      response
-        .status(400)
-        .send({
-          message:
-            "Please provide all required fields: author, title, publishedYear",
-        });
+      response.status(400).send({
+        message:
+          "Please provide all required fields: author, title, publishedYear",
+      });
       return;
     }
     const newBook = {
@@ -51,20 +49,63 @@ app.get("/books", async (request, response) => {
 
 // Route to get a single book by ID
 app.get("/books/:id", async (request, response) => {
-    try {
-      const { id } = request.params;
-      const book = await Book.findById(id);
-  
-      if (!book) {
-        return response.status(404).json({ error: "Book not found" });
-      }
-      response.status(200).json(book);
-    } catch (error) {
-      console.error("Error:", error);
-      response.status(500).json({ error: "Internal Server Error" });
+  try {
+    const { id } = request.params;
+    const book = await Book.findById(id);
+
+    if (!book) {
+      return response.status(404).json({ error: "Book not found" });
     }
-  });
-  
+    response.status(200).json(book);
+  } catch (error) {
+    console.error("Error:", error);
+    response.status(500).json({ error: "Internal Server Error" });
+  }
+});
+// Route to update a book by ID
+app.put("/books/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
+    const { title, author, publishedYear } = request.body;
+
+    if (!title || !author || !publishedYear) {
+      return response.status(400).json({
+        error:
+          "Please provide all required fields: title, author, publishedYear",
+      });
+    }
+    const updatedBook = await Book.findByIdAndUpdate(
+      id,
+      { title, author, publishedYear },
+      { new: true }
+    );
+
+    // Check if the book exists
+    if (!updatedBook) {
+      return response.status(404).json({ error: "Book not found" });
+    }
+    response.status(200).json(updatedBook);
+  } catch (error) {
+    console.error("Error:", error);
+    response.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+// Route to delete a book by ID
+app.delete("/books/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
+
+    const deletedBook = await Book.findByIdAndDelete(id);
+    if (!deletedBook) {
+      return response.status(404).json({ error: "Book not found" });
+    }
+    response.status(200).json({ message: "Book deleted successfully" });
+  } catch (error) {
+    console.error("Error:", error);
+    response.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 mongoose
   .connect(mongoURL)
