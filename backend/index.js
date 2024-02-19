@@ -6,12 +6,13 @@ import cors from 'cors'
 const app = express();
 app.use(express.json());
 app.use(cors());
+
 // Enable CORS with specific options
-app.use(cors({
-    origin: 'http://localhost:5000',
-    methods: ['GET', 'POST' , 'PUT', 'DELETE'], 
-    allowedHeaders: ['Content-Type']
-  }));
+// app.use(cors({
+//     origin: 'http://localhost:5000',
+//     methods: ['GET', 'POST' , 'PUT', 'DELETE'], 
+//     allowedHeaders: ['Content-Type']
+//   }));
   
 const port = 5000;
 
