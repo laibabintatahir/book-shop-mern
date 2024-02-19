@@ -35,19 +35,19 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
   ## Frontend Screenshots
 
 ### Home Page
-![Home Page](frontend/images/home.JPG)
+![Home Page](frontend/home.JPG)
 
 ### Create Book
-![Create Book](frontend/images/createBook.JPG)
+![Create Book](frontend/createBook.JPG)
 
 ### Edit Book
-![Edit Book](frontend/images/editBook.JPG)
+![Edit Book](frontend/editBook.JPG)
 
 ### Delete Book
-![Delete Book](frontend/images/deleteBook.JPG)
+![Delete Book](frontend/deleteBook.JPG)
 
 ### Show Book
-![Show Book](frontend/images/showBook.JPG)
+![Show Book](frontend/showBook.JPG)
 
 ### Router
 - Configure client-side routing using React Router DOM for navigation between different views or pages.
