@@ -9,10 +9,10 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
 
 ### CRUD Operations
 - Implement CRUD operations for managing data in the MongoDB database.
-  - Create: Add new entries to the database.
+  - CreateBook: Add new entries to the database.
   - Read: Retrieve data from the database.
-  - Update: Modify existing entries in the database.
-  - Delete: Remove entries from the database.
+  - UpdateBook: Modify existing entries in the database.
+  - DeleteBook: Remove entries from the database.
 
 ### Router
 - Configure backend routes for handling various HTTP requests.
@@ -20,13 +20,8 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
   - Organize routes using Express Router for better code structure and maintainability.
 
 ### CORS Policy
-- Implement Cross-Origin Resource Sharing (CORS) policy to allow or restrict access to the backend API from different origins.
-  - Configure CORS middleware in Express.js to handle cross-origin requests securely.
 
 ### MongoDB Operations
-- Integrate MongoDB with Mongoose for performing database operations.
-  - Define schemas and models for data storage.
-  - Utilize Mongoose methods for CRUD operations such as creating, reading, updating, and deleting documents.
 
 ## Frontend
 
@@ -36,6 +31,23 @@ This project aims to develop a full-stack web application with CRUD (Create, Rea
   - Read: Display data retrieved from the backend in an organized manner.
   - Update: Provide forms or interactive elements for editing existing data.
   - Delete: Offer options for removing data entries.
+
+  ## Frontend Screenshots
+
+### Home Page
+![Home Page](frontend/images/home.JPG)
+
+### Create Book
+![Create Book](/images/createBook.JPG)
+
+### Edit Book
+![Edit Book](frontend/images/editBook.JPG)
+
+### Delete Book
+![Delete Book](frontend/images/deleteBook.JPG)
+
+### Show Book
+![Show Book](frontend/images/showBook.JPG)
 
 ### Router
 - Configure client-side routing using React Router DOM for navigation between different views or pages.
